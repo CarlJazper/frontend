@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom'; // Import Link for navigation
 import './auth.css';
 
 const Login = ({ onLogin }) => {
@@ -34,7 +34,7 @@ const Login = ({ onLogin }) => {
                     alert('Login successful!');
                     localStorage.setItem('token', response.data.token);
                     onLogin();
-                    navigate('/');
+                    navigate('/'); // Navigate to the home page after login
                 }, 500);
             })
             .catch((err) => {
@@ -90,14 +90,14 @@ const Login = ({ onLogin }) => {
                     {error && <p className="error-message">{error}</p>}
                 </form>
                 <p className="switch-auth">
-                    Don't have an account? <a href="/signup">Sign Up</a>
+                    Don't have an account? <Link to="/signup">Sign Up</Link> {/* Use Link for navigation */}
                 </p>
             </div>
 
             {/* Confirmation Modal */}
             {showConfirmDialog && (
                 <div className="confirm-dialog">
-                    <p>Login with this acount?</p>
+                    <p>Login with this account?</p>
                     <button onClick={handleConfirmSubmit}>Yes</button>
                     <button onClick={() => setShowConfirmDialog(false)}>No</button>
                 </div>
