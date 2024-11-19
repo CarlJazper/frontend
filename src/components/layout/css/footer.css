@@ -1,0 +1,78 @@
+/* Footer Styling */
+.footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 4px 1%;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(207, 35, 35, 0.2);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    transform: translateY(100%);
+    transition: transform 0.4s ease-in-out;
+}
+
+.footer.visible {
+    transform: translateY(0);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px; /* Reduce max-width */
+    margin: auto;
+    padding: 0 10px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 2px;
+}
+
+.footer-section h3 {
+    margin-bottom: 2px;
+    font-size: 0.8rem; /* Smaller font size for section titles */
+}
+
+.footer-section p {
+    margin: 0;
+    line-height: 1.1;
+    text-align: center;
+    color: beige;
+    font-size: 0.8rem; /* Smaller text for footer content */
+}
+
+.social-icons {
+    margin-top: 3px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 4px;
+    font-size: 0.9rem; /* Smaller icons */
+    transition: color 0.2s;
+}
+
+.social-icons a:hover {
+    color: #4CAF50;
+}
+
+.footer-bottom {
+    margin-top: 3px;
+    font-size: 0.6rem; /* Smaller text for bottom text */
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: beige;
+    text-align: center;
+}
+
+/* Adjust body padding for smaller footer */
+body {
+    padding-bottom: 50px; /* Reduce padding for smaller footer */
+}
