@@ -17,7 +17,7 @@ const Profile = () => {
     const fetchProfile = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:5000/profile', {
+        const response = await axios.get('https://backend-tm1u.onrender.com/profile', {
           headers: { Authorization: token },
         });
         setProfile(response.data);

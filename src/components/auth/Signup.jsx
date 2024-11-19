@@ -29,7 +29,7 @@ const Signup = () => {
         setProgress(10);
 
         // Proceed with the form submission after confirmation
-        axios.post('http://localhost:5000/signup', formData)
+        axios.post('https://backend-tm1u.onrender.com/signup', formData)
             .then((response) => {
                 setProgress(100);
                 setTimeout(() => {

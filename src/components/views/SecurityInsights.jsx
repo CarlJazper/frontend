@@ -22,13 +22,13 @@ const SecurityInsightsDashboard = () => {
 
       try {
         const [logsResponse, analysisResponse, suspiciousAnalysisResponse] = await Promise.all([
-          fetch('http://localhost:5000/logs?page=1&limit=5', {
+          fetch('https://backend-tm1u.onrender.com/logs?page=1&limit=5', {
             headers: { Authorization: token }
           }),
-          fetch('http://localhost:5000/analysis_results', {
+          fetch('https://backend-tm1u.onrender.com/analysis_results', {
             headers: { Authorization: token }
           }),
-          fetch('http://localhost:5000/suspicious_analysis_results', {
+          fetch('https://backend-tm1u.onrender.com/suspicious_analysis_results', {
             headers: { Authorization: token }
           })
         ]);

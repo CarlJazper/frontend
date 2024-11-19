@@ -27,7 +27,7 @@ const LogUpload = () => {
     
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.post('http://localhost:5000/upload_log', formData, {
+            const response = await axios.post('https://backend-tm1u.onrender.com/upload_log', formData, {
                 headers: { 'Authorization': token }
             });
             setMessage(response.data.message);

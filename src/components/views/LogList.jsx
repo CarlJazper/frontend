@@ -16,7 +16,7 @@ const LogList = () => {
           const token = localStorage.getItem('token'); // Get token from localStorage or context
       
           try {
-            const response = await axios.get('http://localhost:5000/logs', {
+            const response = await axios.get('https://backend-tm1u.onrender.com/logs', {
               params: { page, limit },
               headers: { Authorization: token },
               onDownloadProgress: (progressEvent) => {
